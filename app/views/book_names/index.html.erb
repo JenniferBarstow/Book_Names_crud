@@ -1,3 +1,5 @@
+<h2>Books</h2>
+
 <% @book_names.each do |book_name| %>
 <div>
   <p><%= link_to book_name.title, book_name_path(book_name) %></p>
@@ -5,3 +7,7 @@
   <p><%= book_name.content %>
 </div>
 <% end %>
+
+<br/>
+
+<%= link_to 'New Book', new_book_name_path(@book_name) %>
