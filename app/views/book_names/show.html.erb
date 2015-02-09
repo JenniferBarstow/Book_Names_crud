@@ -7,3 +7,6 @@
 <br/>
 
 <%= @book_name.content%>
+
+<%= link_to 'Edit', edit_book_name_path(@book_name) %>
+<%= link_to 'Delete', book_name_path(@book_name), method: :delete, data: {confirm: 'Really? For Reals'} %>

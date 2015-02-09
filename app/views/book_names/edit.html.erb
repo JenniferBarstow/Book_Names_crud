@@ -1,0 +1,18 @@
+<%= form_for @book_name, url: book_name_path(@book_name), method: :patch do |f| %>
+  <div>
+    <%= f.label :title  %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <%= f.submit "Update Book" %>
+<% end %>

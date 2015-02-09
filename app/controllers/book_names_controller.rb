@@ -22,11 +22,26 @@ class BookNamesController < ApplicationController
     @book_name = BookName.find(params[:id])
   end
 
+  def edit
+    @book_name = BookName.find(params[:id])
+  end
 
+  def update
+    @book_name = BookName.find(params[:id])
 
+  if @book_name.update(book_name_params)
 
+    redirect_to book_names_path
+  else
+    render :edit
+  end
+end
 
-
+  def destroy
+    book_name = BookName.find(params[:id])
+    book_name.destroy
+    redirect_to book_names_path
+  end
 
   private
 
